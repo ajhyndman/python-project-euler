@@ -1,5 +1,3 @@
-import itertools
-
 # Memoized Function solution.
 
 # memoization list
@@ -33,6 +31,7 @@ print(solution)
 
 # I discovered generators!
 
+# fibonacci generator function
 def fibonacci():
     previous, current = 1, 1
     while True:
@@ -40,9 +39,10 @@ def fibonacci():
         previous, current = current, previous + current
 
 
+# solution calculation
 solution = 0
 for x in fibonacci():
-    if x >= 4000000:
+    if x > 4000000:
         break
     elif 0 == x%2:
         solution += x
