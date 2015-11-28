@@ -33,15 +33,15 @@ print(solution)
 
 # I discovered generators!
 
-def fib():
-    prev, curr = 1, 1
+def fibonacci():
+    previous, current = 1, 1
     while True:
-        yield curr
-        prev, curr = curr, prev + curr
+        yield current
+        previous, current = current, previous + current
 
 
 solution = 0
-for x in fib():
+for x in fibonacci():
     if x >= 4000000:
         break
     elif 0 == x%2:
