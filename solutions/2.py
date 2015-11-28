@@ -1,3 +1,5 @@
+import itertools
+
 # Memoized Function solution.
 
 # memoization list
@@ -21,6 +23,29 @@ while fibonacci(i) <= 4000000:
     if 0 == fibonacci(i)%2:
         solution += fibonacci(i)
     i += 1
+
+
+print(solution)
+
+
+
+
+
+# I discovered generators!
+
+def fib():
+    prev, curr = 1, 1
+    while True:
+        yield curr
+        prev, curr = curr, prev + curr
+
+
+solution = 0
+for x in fib():
+    if x >= 4000000:
+        break
+    elif 0 == x%2:
+        solution += x
 
 
 print(solution)
