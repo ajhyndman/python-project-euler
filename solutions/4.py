@@ -1,7 +1,4 @@
-# Pretty thoughtless answer
-
-
-
+# I: Pretty thoughtless answer
 
 
 # PALINDROME CHECKER
@@ -17,9 +14,6 @@ def is_palindrome(x):
         i += 1
 
     return True
-
-
-
 
 
 # List all possible 3-digit products
@@ -41,3 +35,16 @@ for x in products:
         # Yay, solution
         print("The largest product of two three digit numbers that is also a palindrome is:", x)
         break
+
+
+
+
+
+# II: List comprehension
+
+
+# I like this answer!
+
+solution = max(x*y for x in range(100, 1000) for y in range(100, 1000) if str(x*y) == str(x*y)[::-1])
+
+print("The largest product of two three digit numbers that is also a palindrome is:", solution)
