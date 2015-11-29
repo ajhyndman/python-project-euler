@@ -60,6 +60,7 @@ for prime in primes():
     elif 0 == number%prime:
         factors.append(prime)
 
+
 print("The prime factors of 600851475143 are:", factors)
 
 largest_factor = max(factors)
